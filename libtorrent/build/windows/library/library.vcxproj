@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-Console|Win32">
+      <Configuration>Debug-Console</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-Console|x64">
+      <Configuration>Debug-Console</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DCAB9909-A1B3-4947-AE44-D9227A42CDF0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>library</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug-Console|Win32'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug-Console|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_LIB;WIN32;_WIN32;_DEBUG;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0600;__USE_W32_SOCKETS;TORRENT_USE_BOOST_DATE_TIME;TORRENT_BUILDING_LIBRARY;BOOST_ASIO_ENABLE_CANCELIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\include;C:\Code\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <SDLCheck>
+      </SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\include;C:\Code\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\include;C:\Code\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\include;C:\Code\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\bindings\c\library.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\add_scalar.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\fe.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\ge.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\keypair.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\key_exchange.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\sc.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\sign.cpp" />
+    <ClCompile Include="..\..\..\ed25519\src\verify.cpp" />
+    <ClCompile Include="..\..\..\src\add_torrent_params.cpp" />
+    <ClCompile Include="..\..\..\src\alert.cpp" />
+    <ClCompile Include="..\..\..\src\alert_manager.cpp" />
+    <ClCompile Include="..\..\..\src\allocator.cpp" />
+    <ClCompile Include="..\..\..\src\announce_entry.cpp" />
+    <ClCompile Include="..\..\..\src\assert.cpp" />
+    <ClCompile Include="..\..\..\src\bandwidth_limit.cpp" />
+    <ClCompile Include="..\..\..\src\bandwidth_manager.cpp" />
+    <ClCompile Include="..\..\..\src\bandwidth_queue_entry.cpp" />
+    <ClCompile Include="..\..\..\src\bdecode.cpp" />
+    <ClCompile Include="..\..\..\src\bitfield.cpp" />
+    <ClCompile Include="..\..\..\src\block_cache.cpp" />
+    <ClCompile Include="..\..\..\src\bloom_filter.cpp" />
+    <ClCompile Include="..\..\..\src\broadcast_socket.cpp" />
+    <ClCompile Include="..\..\..\src\bt_peer_connection.cpp" />
+    <ClCompile Include="..\..\..\src\chained_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\choker.cpp" />
+    <ClCompile Include="..\..\..\src\close_reason.cpp" />
+    <ClCompile Include="..\..\..\src\ConvertUTF.cpp" />
+    <ClCompile Include="..\..\..\src\cpuid.cpp" />
+    <ClCompile Include="..\..\..\src\crc32c.cpp" />
+    <ClCompile Include="..\..\..\src\create_torrent.cpp" />
+    <ClCompile Include="..\..\..\src\disk_buffer_holder.cpp" />
+    <ClCompile Include="..\..\..\src\disk_buffer_pool.cpp" />
+    <ClCompile Include="..\..\..\src\disk_io_job.cpp" />
+    <ClCompile Include="..\..\..\src\disk_io_thread.cpp" />
+    <ClCompile Include="..\..\..\src\disk_io_thread_pool.cpp" />
+    <ClCompile Include="..\..\..\src\disk_job_fence.cpp" />
+    <ClCompile Include="..\..\..\src\disk_job_pool.cpp" />
+    <ClCompile Include="..\..\..\src\entry.cpp" />
+    <ClCompile Include="..\..\..\src\enum_net.cpp" />
+    <ClCompile Include="..\..\..\src\error_code.cpp" />
+    <ClCompile Include="..\..\..\src\escape_string.cpp" />
+    <ClCompile Include="..\..\..\src\ffs.cpp" />
+    <ClCompile Include="..\..\..\src\file.cpp" />
+    <ClCompile Include="..\..\..\src\file_pool.cpp" />
+    <ClCompile Include="..\..\..\src\file_progress.cpp" />
+    <ClCompile Include="..\..\..\src\file_storage.cpp" />
+    <ClCompile Include="..\..\..\src\fingerprint.cpp" />
+    <ClCompile Include="..\..\..\src\gzip.cpp" />
+    <ClCompile Include="..\..\..\src\hasher.cpp" />
+    <ClCompile Include="..\..\..\src\hasher512.cpp" />
+    <ClCompile Include="..\..\..\src\hex.cpp" />
+    <ClCompile Include="..\..\..\src\http_connection.cpp" />
+    <ClCompile Include="..\..\..\src\http_parser.cpp" />
+    <ClCompile Include="..\..\..\src\http_seed_connection.cpp" />
+    <ClCompile Include="..\..\..\src\http_stream.cpp" />
+    <ClCompile Include="..\..\..\src\http_tracker_connection.cpp" />
+    <ClCompile Include="..\..\..\src\i2p_stream.cpp" />
+    <ClCompile Include="..\..\..\src\identify_client.cpp" />
+    <ClCompile Include="..\..\..\src\instantiate_connection.cpp" />
+    <ClCompile Include="..\..\..\src\ip_filter.cpp" />
+    <ClCompile Include="..\..\..\src\ip_notifier.cpp" />
+    <ClCompile Include="..\..\..\src\ip_voter.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\dht_settings.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\dht_state.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\dht_storage.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\dht_tracker.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\dos_blocker.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\ed25519.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\find_data.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\get_item.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\get_peers.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\item.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\msg.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\node.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\node_entry.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\node_id.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\put_data.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\refresh.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\routing_table.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\rpc_manager.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\sample_infohashes.cpp" />
+    <ClCompile Include="..\..\..\src\kademlia\traversal_algorithm.cpp" />
+    <ClCompile Include="..\..\..\src\lazy_bdecode.cpp" />
+    <ClCompile Include="..\..\..\src\listen_socket_handle.cpp" />
+    <ClCompile Include="..\..\..\src\lsd.cpp" />
+    <ClCompile Include="..\..\..\src\magnet_uri.cpp" />
+    <ClCompile Include="..\..\..\src\merkle.cpp" />
+    <ClCompile Include="..\..\..\src\natpmp.cpp" />
+    <ClCompile Include="..\..\..\src\packet_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\parse_url.cpp" />
+    <ClCompile Include="..\..\..\src\part_file.cpp" />
+    <ClCompile Include="..\..\..\src\path.cpp" />
+    <ClCompile Include="..\..\..\src\peer_class.cpp" />
+    <ClCompile Include="..\..\..\src\peer_class_set.cpp" />
+    <ClCompile Include="..\..\..\src\peer_connection.cpp" />
+    <ClCompile Include="..\..\..\src\peer_connection_handle.cpp" />
+    <ClCompile Include="..\..\..\src\peer_info.cpp" />
+    <ClCompile Include="..\..\..\src\peer_list.cpp" />
+    <ClCompile Include="..\..\..\src\performance_counters.cpp" />
+    <ClCompile Include="..\..\..\src\pe_crypto.cpp" />
+    <ClCompile Include="..\..\..\src\piece_picker.cpp" />
+    <ClCompile Include="..\..\..\src\platform_util.cpp" />
+    <ClCompile Include="..\..\..\src\proxy_base.cpp" />
+    <ClCompile Include="..\..\..\src\proxy_settings.cpp" />
+    <ClCompile Include="..\..\..\src\puff.cpp" />
+    <ClCompile Include="..\..\..\src\random.cpp" />
+    <ClCompile Include="..\..\..\src\read_resume_data.cpp" />
+    <ClCompile Include="..\..\..\src\receive_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\request_blocks.cpp" />
+    <ClCompile Include="..\..\..\src\resolver.cpp" />
+    <ClCompile Include="..\..\..\src\resolve_links.cpp" />
+    <ClCompile Include="..\..\..\src\session.cpp" />
+    <ClCompile Include="..\..\..\src\session_call.cpp" />
+    <ClCompile Include="..\..\..\src\session_handle.cpp" />
+    <ClCompile Include="..\..\..\src\session_impl.cpp" />
+    <ClCompile Include="..\..\..\src\session_settings.cpp" />
+    <ClCompile Include="..\..\..\src\session_stats.cpp" />
+    <ClCompile Include="..\..\..\src\session_udp_sockets.cpp" />
+    <ClCompile Include="..\..\..\src\settings_pack.cpp" />
+    <ClCompile Include="..\..\..\src\sha1.cpp" />
+    <ClCompile Include="..\..\..\src\sha1_hash.cpp" />
+    <ClCompile Include="..\..\..\src\sha512.cpp" />
+    <ClCompile Include="..\..\..\src\smart_ban.cpp" />
+    <ClCompile Include="..\..\..\src\socket_io.cpp" />
+    <ClCompile Include="..\..\..\src\socket_type.cpp" />
+    <ClCompile Include="..\..\..\src\socks5_stream.cpp" />
+    <ClCompile Include="..\..\..\src\stack_allocator.cpp" />
+    <ClCompile Include="..\..\..\src\stat.cpp" />
+    <ClCompile Include="..\..\..\src\stat_cache.cpp" />
+    <ClCompile Include="..\..\..\src\storage.cpp" />
+    <ClCompile Include="..\..\..\src\storage_piece_set.cpp" />
+    <ClCompile Include="..\..\..\src\storage_utils.cpp" />
+    <ClCompile Include="..\..\..\src\string_util.cpp" />
+    <ClCompile Include="..\..\..\src\time.cpp" />
+    <ClCompile Include="..\..\..\src\timestamp_history.cpp" />
+    <ClCompile Include="..\..\..\src\torrent.cpp" />
+    <ClCompile Include="..\..\..\src\torrent_handle.cpp" />
+    <ClCompile Include="..\..\..\src\torrent_info.cpp" />
+    <ClCompile Include="..\..\..\src\torrent_peer.cpp" />
+    <ClCompile Include="..\..\..\src\torrent_peer_allocator.cpp" />
+    <ClCompile Include="..\..\..\src\torrent_status.cpp" />
+    <ClCompile Include="..\..\..\src\tracker_manager.cpp" />
+    <ClCompile Include="..\..\..\src\udp_socket.cpp" />
+    <ClCompile Include="..\..\..\src\udp_tracker_connection.cpp" />
+    <ClCompile Include="..\..\..\src\upnp.cpp" />
+    <ClCompile Include="..\..\..\src\utf8.cpp" />
+    <ClCompile Include="..\..\..\src\utp_socket_manager.cpp" />
+    <ClCompile Include="..\..\..\src\utp_stream.cpp" />
+    <ClCompile Include="..\..\..\src\ut_metadata.cpp" />
+    <ClCompile Include="..\..\..\src\ut_pex.cpp" />
+    <ClCompile Include="..\..\..\src\version.cpp" />
+    <ClCompile Include="..\..\..\src\web_connection_base.cpp" />
+    <ClCompile Include="..\..\..\src\web_peer_connection.cpp" />
+    <ClCompile Include="..\..\..\src\write_resume_data.cpp" />
+    <ClCompile Include="..\..\..\src\xml_parse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\ed25519\src\fe.h" />
+    <ClInclude Include="..\..\..\ed25519\src\fixedint.h" />
+    <ClInclude Include="..\..\..\ed25519\src\ge.h" />
+    <ClInclude Include="..\..\..\ed25519\src\precomp_data.h" />
+    <ClInclude Include="..\..\..\ed25519\src\sc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\Makefile.am" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
